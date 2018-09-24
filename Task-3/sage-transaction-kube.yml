@@ -9,7 +9,7 @@ spec:
   ports:
   - protocol: TCP
     port: 8081
-    nodePort: 8081
+    nodePort: 5000
 
 ---
 
@@ -31,9 +31,9 @@ spec:
     spec:
       containers:
       - name: sage-transaction
-        image: dockerhub.com/sage-transaction:autoscaling     # Consider you have pushed your image from task1
+        image: redhatprabu/sage    # Consider you have pushed your image to dockerhub Repoo from task1
         ports:
-        - containerPort: 8081
+        - containerPort: 5000
         livenessProbe:
           httpGet:
             path: /
