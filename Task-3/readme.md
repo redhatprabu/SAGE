@@ -1,5 +1,5 @@
 
-# 1AWS ECS Deployment : 
+# 1. AWS ECS Deployment : 
 
 1) Create Docker images from build file (Tried sample blog and home page for sage) #not from task1 
 
