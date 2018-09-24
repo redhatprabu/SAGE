@@ -1,5 +1,5 @@
 
-#H1AWS ECS Deployment : 
+# 1AWS ECS Deployment : 
 
 1) Create Docker images from build file (Tried sample blog and home page for sage) #not from task1 
 
@@ -23,7 +23,30 @@ eg : You can scan your docker images locally using (aquasec ) to make sure you h
 
 
 
-Kubernetes Deployment : 
+# Kubernetes Deployment : 
+Make sure you have mysql installed and tables created on localhost 
+
+ 1) Build docker file and crate and push image 
+
+ 2) Install K8s master and worker nodes
+
+ 3) Attached deployment file (inclusing autoscaling and Horizantal Pod Autocaling ) 
+
+  4) kubectl apply -f sage-transaction-kube.yml
+
+  5) Kubectl get svc | grep sage
+
+  6) Access the curl -v -k 'http://localhost:8081/api/v1/transactions?day=2'
+
+       should result last two days db transactions details 
+
+
+
+
+note : DB table already shold be crated and tables are inserted. 
+
+DB table name : transaction
+
 
 
 
